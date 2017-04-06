@@ -1,0 +1,9 @@
+shared:
+    image: node:6
+
+jobs:
+    main:
+        environment:
+            SD_TEMPLATE_PATH: './sd-template-publish.yaml'
+        steps:
+            - print: echo $SD_TOKEN
