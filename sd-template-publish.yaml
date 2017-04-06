@@ -1,0 +1,10 @@
+name: screwdriver/template-publish
+version: 1.0.0
+description: Publishes the template yaml from sd-template.yaml or SD_TEMPLATE_PATH
+maintainer: tiffanykyi@gmail.com
+config:
+    image: node:6
+    steps:
+        - setup: mkdir node_modules
+        - install: npm install screwdriver-template-main
+        - publish: node ./node_modules/screwdriver-template-main/publish.js
